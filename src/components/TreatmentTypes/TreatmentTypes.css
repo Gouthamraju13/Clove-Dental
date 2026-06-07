@@ -1,0 +1,98 @@
+.treatments-section {
+  padding: 76px 0;
+  background-color: var(--section-bg);
+}
+
+.treatment-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 36px;
+}
+
+.treatment-top .section-header {
+  margin-bottom: 0;
+}
+
+.treatments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.treatment-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 28px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(36, 239, 131, 0.45);
+}
+
+.treatment-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 17px;
+}
+
+.treatment-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 18px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.treatment-card h3 span {
+  color: var(--primary-color);
+}
+
+.treatment-card p {
+  color: var(--secondary-text);
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.card-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 38px;
+  border-radius: 999px;
+  background-color: rgba(36, 239, 131, 0.08);
+  border: 1px solid rgba(36, 239, 131, 0.18);
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+@media (max-width: 820px) {
+  .treatments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .treatments-section {
+    padding: 58px 0;
+  }
+}
